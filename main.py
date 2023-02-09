@@ -25,7 +25,7 @@ class Earth(Planet):
     def __init__(self, name, square, speed_of_light):
         super().__init__(name, square, speed_of_light)
 
-    def live(self):
+    def life(self):
         return f"{self.name} обитаемая планета"
 
 
@@ -33,7 +33,7 @@ class Jupiter(Planet):
     def __init__(self, name, square, speed_of_light):
         super().__init__(name, square, speed_of_light)
 
-    def live(self):
+    def life(self):
         return f"{self.name} необитаемая планета"
 
 
@@ -41,14 +41,15 @@ class Venus(Planet):
     def __init__(self, name, square, speed_of_light):
         super().__init__(name, square, speed_of_light)
 
-    def live(self):
+    def life(self):
         return f"{self.name} необитаемая планета"
 
 
 live = [Earth("Earth", 4, 1.08), Jupiter("Jupiter", 4.3, 1.08), Venus("Venus", 4, 1.08)]
 for i in live:
-    print(i.live())
-print("_"*20)
+    print(i.life())
+
+print("_"*30)
 
 satell1 = Satellite("Earth", "Moon")
 satell2 = Satellite("Jupiter", "Europa and other 91")
